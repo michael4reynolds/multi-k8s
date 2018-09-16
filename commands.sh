@@ -13,8 +13,9 @@ kubectl delete service client-node-service
 
 # kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all
 
-ls
+ls k8s
 kubectl apply -f k8s
-kubectl get deployments
 kubectl get pods
+kubectl get deployments
 kubectl get services
+kubectl logs <pod>-<name>
