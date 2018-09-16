@@ -1,6 +1,20 @@
-docker-compose up --build
+docker build -t michael4reynolds/multi-client ./client
+docker build -t michael4reynolds/multi-server ./server
+docker build -t michael4reynolds/multi-worker ./worker
 
-# In another terminal tab
-open localhost:3050
+docker push michael4reynolds/multi-client
+docker push michael4reynolds/multi-server
+docker push michael4reynolds/multi-worker
 
-# docker-compose down --rmi all
+kubectl get deployments
+kubectl delete deployment client-deployment
+kubectl get services
+kubectl delete service client-node-service
+
+# kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all
+
+ls
+kubectl apply -f k8s
+kubectl get deployments
+kubectl get pods
+kubectl get services
