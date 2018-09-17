@@ -24,3 +24,6 @@ kubectl logs <pod>-<name>
 
 kubectl get storageclass
 kubectl describe storageclass
+
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
+kubectl get secrets
