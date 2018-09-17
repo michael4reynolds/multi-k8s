@@ -16,6 +16,11 @@ kubectl delete service client-node-service
 ls k8s
 kubectl apply -f k8s
 kubectl get pods
+kubectl get pv
+kubectl get pvc
 kubectl get deployments
 kubectl get services
 kubectl logs <pod>-<name>
+
+kubectl get storageclass
+kubectl describe storageclass
