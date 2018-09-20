@@ -71,3 +71,9 @@ ls
 
 exit
 ```
+
+Get Project Id from GCP > Nav > settings : Project ID
+
+Get Default Data Zone from GCP > Nav > Kubenetes Engine > Clusters : Location
+Get Cluster Name from GCP > Nav > Kubenetes Engine > Clusters : Name
+
