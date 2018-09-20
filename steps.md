@@ -30,3 +30,44 @@ git create -d 'Multi-Kubernetes app sample'
 ### Create Cluster
 
 - Name it whatever you want ie. multi-cluster
+
+### Create a Service Account
+
+- GCP Nav Menu > IAM & Admin > Service Accounts > Create Service Account
+- Service account name: travis-deployer
+- Role: Kubernetes > Kubernetes Engine Admin
+- Furnish a new private key > JSON
+- SAVE & NEVER EXPOSE SAVED FILE!!!
+
+### Download & Install the Travis CLI
+
+- We're using a Docker container simply to make sure that you can use Ruby without installing it onto your system in case you don't have it already - ie. Windows
+
+```bash
+docker run -it -v $(pwd):/app ruby:2.3 sh
+
+ls
+cd app
+ls
+gem install travis --no-rdoc --no-ri
+travis
+travis login
+
+Copy and rename json key to current directory volume - ie. ~/Downloads to multi-k8s/service-account.json
+```
+
+```bash
+ls
+travis encrypt-file service-account.json -r michael4reynolds/multi-k8s
+```
+
+Copy given `openssl` command and paste it into .travis.yml's before-install section
+
+Remove service-account.json
+
+```bash
+rm -f service-account.json
+ls
+
+exit
+```
