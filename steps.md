@@ -77,3 +77,4 @@ Get Project Id from GCP > Nav > settings : Project ID
 Get Default Data Zone from GCP > Nav > Kubenetes Engine > Clusters : Location
 Get Cluster Name from GCP > Nav > Kubenetes Engine > Clusters : Name
 
+Add Docker username and password to environment variables on Travis CI > My Repos > multi-k8s > Settings > Environment variables
