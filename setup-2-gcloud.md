@@ -86,7 +86,8 @@ git rev-parse HEAD
 git log
 ```
 
-Configure GCloud CLI on Cloud Console
+## Configure GCloud CLI on Cloud Console
+
 GCP > Open Shell:
 
 ```bash
@@ -117,3 +118,17 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 
 helm init --service-account tiller --upgrade
 ```
+
+Ingress Nginx
+[Deploy Ingress Nginx](https://kubernetes.github.io/ingress-nginx/deploy/)
+
+```bash
+# In GCloud Shell
+helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
+```
+
+Confirm ingress controller installation
+
+- GCP > Nav > Kube Engine > Workloads
+- GCP > Nav > Kube Engine > Services
+- GCP > Nav > Network Services > Load Balancing
