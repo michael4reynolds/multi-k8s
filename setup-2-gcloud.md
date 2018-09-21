@@ -147,3 +147,30 @@ Confirm deployments created on GCP
 - GCP > Nav > Kube Engine > Services
 - GCP > Nav > Kube Engine > Configuration
 - GCP > Nav > Kube Engine > Storage
+
+## Workflow for Changing in Production
+
+Terminal
+
+```bash
+git checkout -b devel
+git status
+git add .
+git commit -m 'updated header'
+git push origin devel
+git checkout master
+```
+
+Github
+
+- Pull requests
+  - New pull request
+    - compare(devel) merge into
+    - base(master)
+    - Create Pull Request
+    - Edit title, message
+    - Create pull request
+    - Wait for green - all checks have passed
+    - Click Merge pull request
+    - Confirm merge
+    - Delete branch - Or not
