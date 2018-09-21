@@ -85,3 +85,18 @@ Use Git SHA
 git rev-parse HEAD
 git log
 ```
+
+Configure GCloud CLI on Cloud Console
+GCP > Open Shell:
+
+```bash
+# In GCloud Shell
+# Only needs to run once!
+gcloud config set project multi-k8s-217015
+gcloud config set compute/zone us-east1-b
+gcloud container clusters get-credentials multi-cluster
+kubectl get pods
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=mypgpassword123
+```
+
+Verify pgpasswod is added to GCP > Kubernetes Engine > Configuration
