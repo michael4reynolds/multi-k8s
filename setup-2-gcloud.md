@@ -13,7 +13,7 @@ git create -d 'Multi-Kubernetes app sample'
 
 ### Link to Travis
 
-- open https://travis-ci.org
+- open [Travis CI](https://travis-ci.org)
 - Sync Account
 - Search for Multi-K8s
 - Profile > Repositories > Multi-K8s - click `+`
@@ -80,6 +80,7 @@ Get Cluster Name from GCP > Nav > Kubenetes Engine > Clusters : Name
 Add Docker username and password to environment variables on Travis CI > My Repos > multi-k8s > Settings > Environment variables
 
 Use Git SHA
+
 ```bash
 git rev-parse HEAD
 git log
