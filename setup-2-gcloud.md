@@ -100,3 +100,20 @@ kubectl create secret generic pgpassword --from-literal PGPASSWORD=mypgpassword1
 ```
 
 Verify pgpasswod is added to GCP > Kubernetes Engine > Configuration
+
+Install Helm
+
+- [Instructions](https://docs.helm.sh/using_helm/#installing-helm)
+- [Script](https://docs.helm.sh/using_helm/#from-script)
+
+```bash
+# In GCloud Shell
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
+
+kubectl create serviceaccount --namespace kube-system tiller
+kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+
+helm init --service-account tiller --upgrade
+```
