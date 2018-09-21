@@ -132,3 +132,18 @@ Confirm ingress controller installation
 - GCP > Nav > Kube Engine > Workloads
 - GCP > Nav > Kube Engine > Services
 - GCP > Nav > Network Services > Load Balancing
+
+## Deploy
+
+```bash
+git add .
+git commit -m 'latest commit message here'
+git push origin master
+```
+
+Confirm deployments created on GCP
+
+- GCP > Nav > Kube Engine > Workloads
+- GCP > Nav > Kube Engine > Services
+- GCP > Nav > Kube Engine > Configuration
+- GCP > Nav > Kube Engine > Storage
