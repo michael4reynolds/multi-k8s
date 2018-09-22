@@ -35,3 +35,14 @@ $ helm install \
     --namespace kube-system \
     stable/cert-manager
 ```
+
+## Verify the Certificate
+
+Note: wait 15 minutes after updating before checking
+
+```bash
+# GCloud shell
+kubectl get certificates
+kubectl describe certificates
+kubectl get secrets
+```
