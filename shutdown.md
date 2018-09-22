@@ -2,7 +2,7 @@
 
 ## Google Cloud Cleanup
 
-### Steps to clean up:
+### Steps to clean up
 
 1. Click the project selector on the top left of the page
    ![Step 1](https://udemy-images.s3.amazonaws.com/redactor/raw/2018-09-06_15-52-13-d86ba5ce924035b5e698e5106dbcea57.png)
